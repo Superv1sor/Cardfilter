@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cardfilter</title>
+    <!-- Custom CSS -->
+    <style>
+        button.active {
+            font-weight: bold;
+        }
+        .filter {
+            float:left;
+            margin: 0 10px 10px 0;
+            padding: 20px 20px 30px;
+            border:solid #000 1px;
+        }
+        .red {
+            background-color: red;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn-filter").click(function() {
+                var value = $(this).attr('data-filter');
+                if(value == "all") { 
+                    $('.filter').show('1000');
+                } else { 
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+                }
+                $(".btn-filter").removeClass('active');
+                $(this).addClass('active');
+            });
+
+        });
+    </script> 
+</head>
+<body>
+    <h1>Filter Cards</h1>
+    <button class="btn-filter active" data-filter="all">All Cards</button>
+    <button class="btn-filter" data-filter="red">Red Cards</button>
+    <button class="btn-filter" data-filter="yellow">Yellow Cards</button>
+    <button class="btn-filter" data-filter="green">Green Cards</button> 
+    <hr />
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+</body>
+</html>
