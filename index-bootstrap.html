@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cardcol-sm filter (Bootstrap)</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        .container {
+            max-width: 1250px;
+        }
+        button.active {
+            color: #000!important;
+        }
+        .filter {
+            margin: 0 15px 0 0;
+        }
+    </style>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function() {
+            $(".btn-filter").click(function() {
+                var value = $(this).attr('data-filter');
+                if(value == "all") { 
+                    $('.filter').show('1000');
+                } else { 
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+                }
+                $(".btn-filter").removeClass('active');
+                $(this).addClass('active');
+            });
+
+        });
+    </script> 
+</head>
+<body>
+    <div class="container">
+        <h1>Filter Cards</h1>
+        <h2>Bootstrap styled</h2>
+        <button class="btn-filter btn btn-primary active" data-filter="all">All Cards</button>
+        <button class="btn-filter btn btn-danger" data-filter="red">Red Cards</button>
+        <button class="btn-filter btn btn-warning" data-filter="yellow">Yellow Cards</button>
+        <button class="btn-filter btn btn-success" data-filter="green">Green Cards</button> 
+
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-sm-2 row row-cols-lg-3">
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter red card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Red Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter yellow card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Yellow Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="filter green card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">&nbsp;</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Card</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
