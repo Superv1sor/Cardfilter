@@ -25,6 +25,11 @@
         .green {
             background-color: green;
         }
+        a.change {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
     </style>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -47,11 +52,22 @@
 </head>
 <body>
     <h1>Filter Cards</h1>
+    <h2>With CSS</h2>
+    <a href="./index-bootstrap.html" class="change">With Bootstrap</a>
     <button class="btn-filter active" data-filter="all">All Cards</button>
     <button class="btn-filter" data-filter="red">Red Cards</button>
     <button class="btn-filter" data-filter="yellow">Yellow Cards</button>
     <button class="btn-filter" data-filter="green">Green Cards</button>
     <hr />
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
+    <div class="filter red">Red Card</div>
+    <div class="filter yellow">Yellow Card</div>
+    <div class="filter green">Green Card</div>
     <div class="filter red">Red Card</div>
     <div class="filter yellow">Yellow Card</div>
     <div class="filter green">Green Card</div>
