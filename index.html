@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cardfilter</title>
+    <title>Cardfilter with CSS</title>
     <!-- Custom CSS -->
     <style>
         button.active {
@@ -33,9 +33,9 @@
         $(document).ready(function() {
             $(".btn-filter").click(function() {
                 var value = $(this).attr('data-filter');
-                if(value == "all") { 
+                if(value == "all") {
                     $('.filter').show('1000');
-                } else { 
+                } else {
                     $(".filter").not('.'+value).hide('3000');
                     $('.filter').filter('.'+value).show('3000');
                 }
@@ -43,14 +43,14 @@
                 $(this).addClass('active');
             });
         });
-    </script> 
+    </script>
 </head>
 <body>
     <h1>Filter Cards</h1>
     <button class="btn-filter active" data-filter="all">All Cards</button>
     <button class="btn-filter" data-filter="red">Red Cards</button>
     <button class="btn-filter" data-filter="yellow">Yellow Cards</button>
-    <button class="btn-filter" data-filter="green">Green Cards</button> 
+    <button class="btn-filter" data-filter="green">Green Cards</button>
     <hr />
     <div class="filter red">Red Card</div>
     <div class="filter yellow">Yellow Card</div>
